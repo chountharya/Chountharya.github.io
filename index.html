@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chountharya S | Portfolio</title>
+<meta name="description" content="Portfolio of Chountharya S, CSE (AI &amp; ML) student at Government College of Technology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1b8fea;--ink:#10213a;--pink:#e0267e;--paper:#f6f9fd;--line:#d6e2f1;--amber:#ffc83d;--muted:#4b5d78;--head:'Bricolage Grotesque','Trebuchet MS',sans-serif;--body:'Figtree','Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font:400 17px/1.65 var(--body);color:var(--ink);background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.nav{position:sticky;top:0;z-index:10;background:rgba(246,249,253,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font:800 20px var(--head);text-decoration:none}
+.links{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.links a{text-decoration:none;font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+.links a:hover,.links a.on{border-color:var(--pink)}
+.menu{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:600 15px var(--body);color:var(--ink)}
+.hero{background:var(--blue);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end;padding-top:56px}
+.hero h1{font:800 clamp(40px,6.4vw,76px)/1.02 var(--head);margin:0 0 16px;letter-spacing:-.02em}
+.hero p{font-size:19px;max-width:34em;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:56px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid #fff}
+.btn.p{background:#fff;color:var(--ink)}
+.btn:hover{background:var(--pink);border-color:var(--pink);color:#fff}
+.photo{margin:0;align-self:end}
+.photo img{display:block;width:100%;max-width:340px;margin-left:auto;border-radius:200px 200px 0 0;aspect-ratio:4/5;object-fit:cover;object-position:top}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font:800 clamp(28px,4vw,40px)/1.15 var(--head);margin:0 0 24px;letter-spacing:-.01em}
+h3{font:700 20px var(--head);margin:0 0 6px}
+.lede{max-width:40em;font-size:19px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:12px 0 0;padding:0}
+.chips li{background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 14px;font-weight:500}
+.grade{color:var(--pink);font-weight:600}
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.proj ul{padding-left:20px;margin:12px 0 0}
+.demo{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
+.demo svg{width:100%;max-width:360px;height:auto;overflow:visible}
+#tilt{transform-origin:200px 120px;transition:transform .5s ease}
+.demo.on #tilt{transform:rotate(-24deg)}
+#led{fill:#b7c3d4;transition:fill .2s}
+.demo.on #led{fill:var(--amber);filter:drop-shadow(0 0 8px var(--amber))}
+.wave{opacity:0;fill:none;stroke:var(--pink);stroke-width:3;stroke-linecap:round}
+.demo.on .wave{opacity:1;animation:beep .6s ease-in-out infinite alternate}
+.demo.on .wave.w2{animation-delay:.3s}
+@keyframes beep{from{opacity:.25}to{opacity:1}}
+.demo button{margin-top:8px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:11px 22px;font:600 16px var(--body);cursor:pointer}
+.demo button:hover{background:var(--pink)}
+.status{margin:12px 0 0;font-weight:500;min-height:3em}
+.edu{border-left:4px solid var(--pink);padding-left:20px;max-width:40em}
+.empty{background:#fff;border:1px dashed var(--muted);border-radius:12px;padding:24px;max-width:40em;color:var(--muted)}
+.contact a.big{display:block;font:700 clamp(20px,3.4vw,30px) var(--head);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line);max-width:640px;overflow-wrap:anywhere}
+.contact a.big:hover{color:var(--pink)}
+footer{padding:28px 0;color:var(--muted);font-size:15px}
+@media(max-width:780px){
+.hero .wrap,.two,.proj{grid-template-columns:1fr}
+.hero .wrap{gap:24px;padding-top:40px}
+.photo img{margin:0 auto;max-width:280px}
+.btns{padding-bottom:32px}
+.menu{display:block}
+.links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 24px 16px}
+.links.open{display:flex}
+.links a{display:block;padding:10px 0}
+section{padding:52px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#tilt,#led{transition:none}.demo.on .wave{animation:none}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home">Chountharya S</a>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home" style="padding:0;border:0">
+  <div class="wrap">
+    <div>
+      <h1>Chountharya S</h1>
+      <p>Computer Science Engineering (AI &amp; ML) student at Government College of Technology. I build small hardware and software projects, and I am learning to make them smarter.</p>
+      <div class="btns">
+        <a class="btn p" href="#projects">See my project</a>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <figure class="photo"><img src="chountharya.jpg" alt="Portrait of Chountharya S" width="720" height="946"></figure>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <p class="lede">I speak Tamil and English, and I am studying Computer Science Engineering with a specialisation in AI &amp; ML. I like turning an idea into something that works on a real board or in a browser, and I want to build a career in software, embedded systems and artificial intelligence.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="two">
+      <div>
+        <h3>Technical skills</h3>
+        <p>Core programming, web development and version control.</p>
+        <ul class="chips"><li>C</li><li>Java</li><li>Python</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>GitHub</li></ul>
+      </div>
+      <div>
+        <h3>Typewriting</h3>
+        <p>Qualified at the <span class="grade">Higher</span> grade in both languages.</p>
+        <ul class="chips"><li>Tamil (Higher)</li><li>English (Higher)</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="proj">
+      <div>
+        <h3>Arduino LED and buzzer control using tilt condition</h3>
+        <p>An Arduino board reads the tilt condition and controls an LED and a buzzer accordingly. It shows how a simple sensor input can trigger a visual and an audible alert.</p>
+        <ul>
+          <li>Tilt detection as the input</li>
+          <li>LED as the visual indicator</li>
+          <li>Buzzer as the audible alert</li>
+          <li>Control logic programmed on the Arduino</li>
+        </ul>
+      </div>
+      <div class="demo" id="demo">
+        <svg viewBox="0 0 400 240" role="img" aria-label="Diagram of an Arduino board with an LED and a buzzer">
+          <g id="tilt">
+            <rect x="60" y="80" width="280" height="80" rx="10" fill="#1b8fea"/>
+            <text x="200" y="128" text-anchor="middle" font-family="Trebuchet MS,sans-serif" font-weight="700" font-size="22" fill="#fff">Arduino</text>
+            <circle id="led" cx="100" cy="60" r="14"/>
+            <rect x="94" y="72" width="12" height="10" fill="#10213a"/>
+            <circle cx="300" cy="58" r="16" fill="#10213a"/>
+            <circle cx="300" cy="58" r="5" fill="#f6f9fd"/>
+            <path class="wave" d="M326 44 q12 14 0 28"/>
+            <path class="wave w2" d="M338 36 q18 22 0 44"/>
+          </g>
+          <rect x="40" y="176" width="320" height="8" rx="4" fill="#d6e2f1"/>
+        </svg>
+        <button type="button" id="toggle" aria-pressed="false">Tilt the board</button>
+        <p class="status" id="status" aria-live="polite">Board is level. LED off, buzzer off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <div class="edu">
+      <h3>Government College of Technology</h3>
+      <p>Computer Science Engineering (AI &amp; ML), currently pursuing.<br>Percentage: 94.87%</p>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="wrap">
+    <h2>Achievements</h2>
+    <div class="empty">Certificates and technical event participation will appear here.</div>
+  </div>
+</section>
+
+<section id="contact" class="contact" style="border:0">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="lede">The best way to reach me is by email.</p>
+    <a class="big" href="mailto:Chountharya@gmail.com">Chountharya@gmail.com</a>
+    <a class="big" href="https://github.com/chountharya" target="_blank" rel="noopener">github.com/chountharya</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Chountharya S</div></footer>
+
+<script>
+(function(){
+  var menu=document.getElementById('menu'),links=document.getElementById('links');
+  menu.addEventListener('click',function(){var o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  var demo=document.getElementById('demo'),btn=document.getElementById('toggle'),st=document.getElementById('status');
+  btn.addEventListener('click',function(){
+    var on=demo.classList.toggle('on');
+    btn.setAttribute('aria-pressed',on);
+    btn.textContent=on?'Level the board':'Tilt the board';
+    st.textContent=on?'Board is tilted. LED on, buzzer on.':'Board is level. LED off, buzzer off.';
+  });
+
+  var anchors=[].slice.call(links.querySelectorAll('a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){anchors.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}
+    })},{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
